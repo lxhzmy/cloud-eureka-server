@@ -1,0 +1,19 @@
+#服务端口
+server:
+  port: 10086
+
+#服务名
+spring:
+  application:
+    name: eureka-server-clustered
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    eurekaServiceUrlPollIntervalSeconds: 30
+    serviceUrl:
+            defaultZone: http://localhost:10086/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: true
